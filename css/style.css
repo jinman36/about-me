@@ -21,7 +21,6 @@ main {
     height: 1000px;
     border: 1px solid green;
     text-align: center;
-
 }
 
 li {
@@ -34,11 +33,17 @@ ol {
     list-style-type: disc;
 }
 
+h2 {
+    color: blue;
+    font-size: 2em;
+    text-emphasis: bold;
+}
+
 footer {
     border: 2px ridge rgb(96, 194, 207);
     padding: 30px;
     font-size:4em ;
     background: linear-gradient(white, black);
-    background-image: url(https://wp-media.patheos.com/blogs/sites/632/2018/01/LadyWood01.png);
+    background-image: url("https://secure.img1-ag.wfcdn.com/im/66676739/resize-h800%5Ecompr-r85/3435/34353817/%2522Underwater+3%2522+-+Picture+Frame+Photographic+Print.jpg");
     background-attachment: fixed;
 }
