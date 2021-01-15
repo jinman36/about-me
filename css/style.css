@@ -1,5 +1,5 @@
 body {
-    background-color:blue;
+    background-color:grey;
 }
 
 
@@ -8,14 +8,15 @@ header {
     padding: 30px;
     font-size: 5em ;
     text-align: center;
+    color: whitesmoke;
     /* background: linear-gradient(black, white); */
-    background-image: url('img/hiking.jpg');
+    background-image: url('https://www.connect.media/wp-content/uploads/2020/07/Connect-Media-Silverstein-801-Blanchard-Seattle-820x510.jpg');
     background-attachment: fixed;
 }
 
 
 main {
-    background: radial-gradient(circle, grey, white);
+    background: radial-gradient(circle, white, blue);
     color: black;
     width: auto;
     height: 1000px;
@@ -39,11 +40,20 @@ h2 {
     text-emphasis: bold;
 }
 
+h3 {
+    color: black;
+    font-size: large;
+}
+
+p {
+    color: black
+}
+
 footer {
     border: 2px ridge rgb(96, 194, 207);
     padding: 30px;
-    font-size:4em ;
+    font-size: 1.5em ;
     background: linear-gradient(white, black);
-    background-image: url('img/hiking.jpg');
-    background-attachment: fixed;
+    /* background-image: url('img/hiking.jpg'); */
+    /* background-attachment: fixed; */
 }
