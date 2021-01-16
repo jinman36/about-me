@@ -64,9 +64,7 @@ img {
     width: 350px;
     height: auto;
     border-radius: 50px;
-    border-width: 3px;
-    border-style: double;
-    border-color: black;
+    border: 3px double black;
     position: fixed;
 }
 
