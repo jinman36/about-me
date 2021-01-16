@@ -14,45 +14,65 @@ header {
 }
 
 main {
-    background: radial-gradient(circle, white, blue);
-    color: black;
+    background: radial-gradient(circle, rgb(0, 132, 255), blue, black);
+    color: wheat;
     width: auto;
     height: 1000px;
-    border: 1px solid green;
-    text-align: center;
-}
-
-li {
-    margin: 50px;
-    color: black;
+    border: 1px solid blue;
 }
 
 ol {
-    color: grey;
-    list-style-type: disc;
+    color: wheat;
+    list-style-type: square;
+    padding-left: 750px;
+}
+
+ul {
+    list-style: circle;
 }
 
 h2 {
-    color: blue;
+    text-align: center;
+    color: whitesmoke;
     font-size: 2em;
-    padding: 10px;
+    margin: 30px;
 }
 
-h3 {
-    color: black;
+dt {
+    color: whitesmoke;
     font-size: large;
     padding: 10px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 400px;
+    list-style-type: square;
+}
+
+dd {
+    text-align: left;
+    padding-left: 450px;
 }
 
 p {
-    color: black
+    margin: 30px;
+    text-align: left;
+    padding-left: 350px;
+}
+
+img {
+    image-rendering: crisp-edges;
+    width: 350px;
+    height: auto;
+    border-radius: 50px;
+    border-width: 3px;
+    border-style: double;
+    border-color: black;
+    position: fixed;
 }
 
 footer {
     border: 2px ridge rgb(96, 194, 207);
     padding: 30px;
     font-size: 1.5em ;
-    background: linear-gradient(white, black);
-    /* background-image: url('img/hiking.jpg'); */
-    /* background-attachment: fixed; */
+    background: linear-gradient(blue, whitesmoke);
 }

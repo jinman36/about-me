@@ -5,7 +5,7 @@
 // //linter test - Passed - I do not have red lines underneth banana
 // // var banana = 42;
 
-var userName = prompt('Welcome to my About Me Page! Which include a quick guessing game!, but first, what is your name?');
+var userName = prompt('Welcome to my About Me Page! Which includes a quick guessing game!, but first, what is your name?');
 alert(`Hello ${userName}, glad to meet you - You will have 5 (yes or no) guesses to figure out where I live`);
 // // write 5 questions - yes or no - y or n (not case sensitive)
 
@@ -57,4 +57,4 @@ if (answerFive === 'yes' || answerFive === 'y') {
   alert('that\'s not even relevant');
 }
 
-alert(`Thanks for playing, ${userName}! Hope you enjoyed your time!`);
+alert(`Thanks for playing, ${userName}! Hope you enjoyed your time, and I look forward to talking more soon!`);
