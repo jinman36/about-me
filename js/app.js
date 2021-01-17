@@ -11,15 +11,10 @@ var guessCount = 0;
 var guessMax = 6;
 var guessCorrect = false;
 var numberGuesses = 4;
-var correctNumber = Math.floor(Math.random() * 10);
+var correctNumber = Math.floor(Math.random() * 10) + 1;
 
-
-
-
-
-
-var userName = prompt('Welcome to my About Me Page! Which includes a quick guessing game. Before we begin though, what is your name?');
-alert(`Hello ${userName}, glad to meet you - You will have 5 (yes or no) guesses to figure out where I live`);
+var userName = prompt('Welcome to my About Me Page! Before we begin with the games though, what\'s your name?');
+alert(`Hello ${userName}, glad to meet you - I have 3 games that include ${questionAmount} questions about different things I like. Hope you enjoy, good luck!`);
 // write 5 questions - yes or no - y or n (not case sensitive)
 
 function questionOne() {
@@ -27,9 +22,9 @@ function questionOne() {
   if (answerOne === 'yes' || answerOne === 'y') {
     correctAnswersTotal++;
     // console.log('you are correct!')
-    alert('you are correct!');
+    alert('You are correct!');
   } else {
-    alert('close, but not quite.');
+    alert('Close, but not quite.');
   }
 }
 
@@ -42,12 +37,12 @@ function questionTwo() {
   } else if (answerTwo === 'yes' || answerTwo === 'y') {
     alert('Try Again!');
   } else {
-    alert('that\'s not even relevant');
+    alert('That isn\'t even relevant');
   }
 }
 
 function questionThree() {
-  var answerThree = prompt('What about the Western side of Lake Washington?').toLowerCase();
+  var answerThree = prompt('What about the western side of Lake Washington?').toLowerCase();
   if (answerThree === 'yes' || answerThree === 'y') {
     correctAnswersTotal++;
     //console.log('You are on a roll!');
@@ -55,7 +50,7 @@ function questionThree() {
   } else if (answerThree === 'no' || answerThree === 'n') {
     alert('Try Again!');
   } else {
-    alert('that\'s not even relevant');
+    alert('That\'s not even relevant');
   }
 }
 
@@ -64,7 +59,7 @@ function questionFour() {
   if (answerFour === 'no' || answerFour === 'n') {
     correctAnswersTotal++;
     //console.log('correct, I like the city!');
-    alert('correct, I like the city!');
+    alert('Correct, I like the city!');
   } else if (answerFour === 'yes' || answerFour === 'y') {
     alert('Not a chance!');
   } else {
@@ -81,29 +76,27 @@ function questionFive() {
   } else if (answerFive === 'no' || answerFive === 'n') {
     alert('Try Again!');
   } else {
-    alert('that\'s not even relevant');
+    alert('That\'s not even relevant');
   }
 }
-
-
 
 // 6th question - requiring numeric input - must indicate 'high'/ 'low'
 // 4 opportunities for a correct answer - after that correct answer will be given
 
 function questionSix() {
   for (var i = 0; i < numberGuesses; i++) {
-    var userAnswer = parseInt(prompt('Guess my random number between 1 and 10'));
+    var userAnswer = parseInt(prompt('Guess my random number. Choose between 1 and 10'));
     if (userAnswer === correctNumber) {
       correctAnswersTotal++;
       alert(`Great job ${userName}, you are correct!`);
       break;
     }
     if (userAnswer < correctNumber && i !== 4) {
-      alert('low');
+      alert('Too low');
     } else if (userAnswer > correctNumber && i !== 4) {
-      alert('high');
+      alert('Too high');
     } else {
-      alert(`you are wrong, correct answer is ${correctNumber}`);
+      alert(`You are wrong, the correct answer is ${correctNumber}`);
       // break;
     }
     console.log(i);
@@ -117,21 +110,21 @@ function questionSix() {
 function questionSeven() {
   while (!guessCorrect && guessCount < guessMax) {
     guessCount++;
-    var question = prompt('What do you think are my favorite color?').toLowerCase();
+    var question = prompt(`What do you think is one of my ${favoriteColors.length} favorite colors?`).toLowerCase();
     for (var j = 0; j < favoriteColors.length; j++) {
       if (question === favoriteColors[j]) {
         correctAnswersTotal++;
-        alert('that is correct');
+        alert('That is correct');
         guessCorrect = true;
       }
     }
   }
   if (!guessCorrect) {
-    alert('not on my list');
+    alert('I like it but that is not correct.');
   }
   //all favoriteColors that were in the array
   if (!guessCorrect) {
-    alert(`the correct favoriteColors are ${favoriteColors}`);
+    alert(`My favorite colors are ${favoriteColors}`);
   }
 }
 
@@ -147,8 +140,6 @@ questionSeven();
 var questionAmount = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven];
 
 // final score spelled out
-alert(`thanks for playing, you got ${correctAnswersTotal} out of ${questionAmount.length} correct!`);
-
+alert(`Thanks for playing, you got ${correctAnswersTotal} out of ${questionAmount.length} correct!`);
 
 // alert(`Thanks for playing, ${userName}! Hope you enjoyed your time, and I look forward to talking more soon!`);
-
