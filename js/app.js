@@ -11,7 +11,7 @@ var guessCount = 0;
 var guessMax = 6;
 var guessCorrect = false;
 var numberGuesses = 4;
-var correctNumber = 24;
+var correctNumber = Math.floor(Math.random() * 10);
 
 
 
@@ -92,21 +92,21 @@ function questionFive() {
 
 function questionSix() {
   for (var i = 0; i < numberGuesses; i++) {
-    var userAnswer = parseInt(prompt('Guess how long I have lived in WA?'));
+    var userAnswer = parseInt(prompt('Guess my random number between 1 and 10'));
     if (userAnswer === correctNumber) {
       correctAnswersTotal++;
       alert(`Great job ${userName}, you are correct!`);
       break;
     }
     if (userAnswer < correctNumber && i !== 4) {
-      alert('Longer than that');
+      alert('low');
     } else if (userAnswer > correctNumber && i !== 4) {
-      alert('Not that many years');
+      alert('high');
     } else {
-      alert(`you are wrong, correct answer is ${correctNumber} years total`);
+      alert(`you are wrong, correct answer is ${correctNumber}`);
       // break;
     }
-    // console.log(i);
+    console.log(i);
   }
 }
 
