@@ -3,8 +3,8 @@ body {
 }
 
 header {
-    border: 2px ridge rgb(96, 194, 207);
-    padding: 30px;
+    border: .3px ridge rgb(96, 194, 207);
+    padding: 5%;
     font-size: 5em ;
     text-align: center;
     color: whitesmoke;
@@ -24,7 +24,8 @@ main {
 ol {
     color: wheat;
     list-style-type: square;
-    padding-left: 750px;
+    padding-left: 40%;
+    padding-bottom: 2%;
 }
 
 ul {
@@ -35,42 +36,42 @@ h2 {
     text-align: center;
     color: whitesmoke;
     font-size: 2em;
-    margin: 30px;
+    margin: 2%;
 }
 
 dt {
     color: whitesmoke;
     font-size: large;
-    padding: 10px;
+    padding: .5%;
     font-weight: bold;
     text-align: left;
-    padding-left: 400px;
+    padding-left: 20%;
     list-style-type: square;
 }
 
 dd {
     text-align: left;
-    padding-left: 450px;
+    padding-left: 24%;
 }
 
 p {
-    margin: 30px;
+    margin: 1%;
     text-align: left;
-    padding-left: 350px;
+    padding-left: 19%;
 }
 
 img {
     image-rendering: crisp-edges;
-    width: 350px;
+    width: 17%;
     height: auto;
-    border-radius: 50px;
+    border-radius: 20%;
     border: 3px double black;
     position: fixed;
 }
 
 footer {
     border: 2px ridge rgb(96, 194, 207);
-    padding: 30px;
+    padding: 1.5%;
     font-size: 1.5em ;
     background: linear-gradient(blue, whitesmoke);
 }
