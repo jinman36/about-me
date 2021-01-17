@@ -6,6 +6,18 @@
 // var banana = 42;
 
 var correctAnswersTotal = 0;
+var favoriteColors = ['blue', ' black', ' green'];
+var guessCount = 0;
+var guessMax = 6;
+var guessCorrect = false;
+var numberGuesses = 4;
+var correctNumber = 24;
+
+
+
+
+
+
 var userName = prompt('Welcome to my About Me Page! Which includes a quick guessing game. Before we begin though, what is your name?');
 alert(`Hello ${userName}, glad to meet you - You will have 5 (yes or no) guesses to figure out where I live`);
 // write 5 questions - yes or no - y or n (not case sensitive)
@@ -74,66 +86,69 @@ function questionFive() {
 }
 
 
-questionOne();
-questionTwo();
-questionThree();
-questionFour();
-questionFive();
 
 // 6th question - requiring numeric input - must indicate 'high'/ 'low'
 // 4 opportunities for a correct answer - after that correct answer will be given
 
-var numberGuesses = 4;
-var correctNumber = 24;
-
-for (var i = 0; i < numberGuesses; i++) {
-  var userAnswer = parseInt(prompt('Guess how long I have lived in WA?'));
-  if (userAnswer === correctNumber) {
-    correctAnswersTotal++;
-    alert(`Great job ${userName}, you are correct!`);
-    break;
+function questionSix() {
+  for (var i = 0; i < numberGuesses; i++) {
+    var userAnswer = parseInt(prompt('Guess how long I have lived in WA?'));
+    if (userAnswer === correctNumber) {
+      correctAnswersTotal++;
+      alert(`Great job ${userName}, you are correct!`);
+      break;
+    }
+    if (userAnswer < correctNumber && i !== 4) {
+      alert('Longer than that');
+    } else if (userAnswer > correctNumber && i !== 4) {
+      alert('Not that many years');
+    } else {
+      alert(`you are wrong, correct answer is ${correctNumber} years total`);
+      // break;
+    }
+    // console.log(i);
   }
-  if (userAnswer < correctNumber && i !== 4) {
-    alert('Longer than that');
-  } else if (userAnswer > correctNumber && i !== 4) {
-    alert('Not that many years');
-  } else {
-    alert(`you are wrong, correct answer is ${correctNumber} years total`);
-    // break;
-  }
-  // console.log(i);
 }
 
 // 7th question with multiple option in an array
 // 6 attempts to name them all -once guessed all possible options displayed
 // final score ?/7
-var favoriteColors = ['blue', ' black', ' green'];
-var guessCount = 0;
-var guessMax = 6;
-var guessCorrect = false;
 
-while (!guessCorrect && guessCount < guessMax) {
-  guessCount++;
-  var question = prompt('What do you think are my favorite color?').toLowerCase();
-  for (var j = 0; j < favoriteColors.length; j++) {
-    if (question === favoriteColors[j]) {
-      correctAnswersTotal++;
-      alert('that is correct');
-      guessCorrect = true;
+function questionSeven() {
+  while (!guessCorrect && guessCount < guessMax) {
+    guessCount++;
+    var question = prompt('What do you think are my favorite color?').toLowerCase();
+    for (var j = 0; j < favoriteColors.length; j++) {
+      if (question === favoriteColors[j]) {
+        correctAnswersTotal++;
+        alert('that is correct');
+        guessCorrect = true;
+      }
     }
   }
-}
-if (!guessCorrect) {
-  alert('not on my list');
+  if (!guessCorrect) {
+    alert('not on my list');
+  }
+  //all favoriteColors that were in the array
+  if (!guessCorrect) {
+    alert(`the correct favoriteColors are ${favoriteColors}`);
+  }
 }
 
-//all favoriteColors that were in the array
-if (!guessCorrect) {
-  alert(`the correct favoriteColors are ${favoriteColors}`);
-}
+// callout for all functions
+questionOne();
+questionTwo();
+questionThree();
+questionFour();
+questionFive();
+questionSix();
+questionSeven();
+
+var questionAmount = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven];
 
 // final score spelled out
-alert(`thanks for playing, you got ${correctAnswersTotal} out of 7 correct!`);
+alert(`thanks for playing, you got ${correctAnswersTotal} out of ${questionAmount.length} correct!`);
 
 
 // alert(`Thanks for playing, ${userName}! Hope you enjoyed your time, and I look forward to talking more soon!`);
+
