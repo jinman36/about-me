@@ -1,7 +1,3 @@
-body {
-    background-color:grey;
-}
-
 header {
     border: .3px ridge rgb(96, 194, 207);
     padding: 5%;
@@ -16,9 +12,10 @@ header {
 main {
     background: radial-gradient(circle, rgb(0, 132, 255), blue, black);
     color: wheat;
-    width: auto;
+    width: 100%;
     height: auto;
     border: 1px solid blue;
+    font-size: 1em;
 }
 
 ol {
@@ -35,7 +32,7 @@ ul {
 h2 {
     text-align: center;
     color: whitesmoke;
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 2%;
 }
 
