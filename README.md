@@ -54,4 +54,4 @@
 * [parseInt() link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
 
 ### Reflections, collaborators and Comments
-* 
+* I need to be more deliberate in reading hte fine print of the canvas assignments, I keep getting points knocked off for things that I didn't understand in the verbiage.
