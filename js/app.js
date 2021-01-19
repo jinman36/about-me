@@ -6,7 +6,7 @@
 // var banana = 42;
 
 var correctAnswersTotal = 0;
-var favoriteColors = ['blue', ' black', ' green'];
+var favoriteColors = ['blue', 'black', 'green'];
 var guessCount = 0;
 var totalGuesses = 6;
 var guessCorrect = false;
@@ -80,12 +80,12 @@ if (answerFive === 'yes' || answerFive === 'y') {
 }
 // }
 
-// 6th question - requiring numeric input - must indicate 'high'/ 'low'
+// Question 6- requiring numeric input - must indicate 'high'/ 'low'
 // 4 opportunities for a correct answer - after that correct answer will be given
-
+//for other integer questions - parceInt(prompt('Guess my random number. Choose between 1 and 10')); - the plus is an awesome shorthand!
 // function questionSix() {
 for (var i = 0; i < numberGuesses; i++) {
-  var userAnswer = parseInt(prompt('Guess my random number. Choose between 1 and 10'));
+  var userAnswer = +prompt('Guess my random number. Choose between 1 and 10');
   if (userAnswer === randomNumber) {
     correctAnswersTotal++;
     alert(`Great job ${userName}, you are correct!`);
@@ -99,11 +99,11 @@ for (var i = 0; i < numberGuesses; i++) {
     alert(`You are wrong, the correct answer is ${randomNumber}`);
     // break;
   }
-  console.log(i);
+  // console.log(i);
 }
 // }
 
-// 7th question with multiple option in an array
+// Question 7 -  with multiple option in an array
 // 6 attempts to name them all -once guessed all possible options displayed
 // final score ?/7
 
@@ -111,7 +111,7 @@ for (var i = 0; i < numberGuesses; i++) {
 while (!guessCorrect && guessCount < totalGuesses) {
   guessCount++;
   var question = prompt(`What do you think is one of my ${favoriteColors.length} favorite colors?`).toLowerCase();
-  for (var j = 0; j < favoriteColors.length; j++) {
+  for (var j = 0; j < totalGuesses; j++) {
     if (question === favoriteColors[j]) {
       correctAnswersTotal++;
       alert('That is correct');

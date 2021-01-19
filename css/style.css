@@ -64,6 +64,7 @@ img {
     border-radius: 20%;
     border: 3px double black;
     position: fixed;
+    min-width: 100px;
 }
 
 footer {
