@@ -9,8 +9,8 @@ var correctAnswersTotal = 0;
 var favoriteColors = ['blue', 'black', 'green'];
 var guessCount = 0;
 var totalGuesses = 6;
-var guessCorrect = false;
 var numberGuesses = 4;
+var guessCorrect = false;
 var randomNumber = Math.floor(Math.random() * 10) + 1;
 
 var userName = prompt('Welcome to my About Me Page! Before we begin with the games though, what\'s your name?');
@@ -83,6 +83,7 @@ function questionFive() {
 // Question 6- requiring numeric input - must indicate 'high'/ 'low'
 // 4 opportunities for a correct answer - after that correct answer will be given
 //for other integer questions - parceInt(prompt('Guess my random number. Choose between 1 and 10')); - the plus is an awesome shorthand!
+
 function questionSix() {
   for (var i = 0; i < numberGuesses; i++) {
     var userAnswer = +prompt('Guess my random number. Choose between 1 and 10');
