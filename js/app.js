@@ -3,15 +3,15 @@
 // console.log('hello world');
 
 // //linter test - Passed - I do not have red lines underneath banana
-// var banana = 42;
+// let banana = 42;
 
-var correctAnswersTotal = 0;
-var favoriteColors = ['blue', 'black', 'green'];
-var guessCount = 0;
-var totalGuesses = 6;
-var numberGuesses = 4;
-var guessCorrect = false;
-var randomNumber = Math.floor(Math.random() * 10) + 1;
+let correctAnswersTotal = 0;
+let favoriteColors = ['blue', 'black', 'green'];
+let guessCount = 0;
+let totalGuesses = 6;
+let numberGuesses = 4;
+let guessCorrect = false;
+let randomNumber = Math.floor(Math.random() * 10) + 1;
 
 function tryAgain() {
   alert('Try again!');
@@ -21,12 +21,12 @@ function notRelevant() {
   alert('That is not close!')
 }
 
-var userName = prompt('Welcome to my About Me Page! Before we begin with the games though, what\'s your name?');
+let userName = prompt('Welcome to my About Me Page! Before we begin with the games though, what\'s your name?');
 alert(`Hello ${userName}, glad to meet you - I have 3 games that include 7 questions about different things I like. Hope you enjoy, good luck!`);
 // write 5 questions - yes or no - y or n (not case sensitive)
 
 function questionOne() {
-  var answerOne = prompt('Do you think I live in Washington?').toLowerCase();
+  let answerOne = prompt('Do you think I live in Washington?').toLowerCase();
   if (answerOne === 'yes' || answerOne === 'y') {
     correctAnswersTotal++;
     // console.log('you are correct!')
@@ -37,7 +37,7 @@ function questionOne() {
 }
 
 function questionTwo() {
-  var answerTwo = prompt('Do you think I live on the East side of the mountains?').toLowerCase();
+  let answerTwo = prompt('Do you think I live on the East side of the mountains?').toLowerCase();
   if (answerTwo === 'no' || answerTwo === 'n') {
     correctAnswersTotal++;
     //console.log('You are on a roll!');
@@ -50,7 +50,7 @@ function questionTwo() {
 }
 
 function questionThree() {
-  var answerThree = prompt('What about the western side of Lake Washington?').toLowerCase();
+  let answerThree = prompt('What about the western side of Lake Washington?').toLowerCase();
   if (answerThree === 'yes' || answerThree === 'y') {
     correctAnswersTotal++;
     //console.log('You are on a roll!');
@@ -63,7 +63,7 @@ function questionThree() {
 }
 
 function questionFour() {
-  var answerFour = prompt('Maybe you think I live in the woods?').toLowerCase();
+  let answerFour = prompt('Maybe you think I live in the woods?').toLowerCase();
   if (answerFour === 'no' || answerFour === 'n') {
     correctAnswersTotal++;
     //console.log('correct, I like the city!');
@@ -76,7 +76,7 @@ function questionFour() {
 }
 
 function questionFive() {
-  var answerFive = prompt('Is it possible I live in Seattle?').toLowerCase();
+  let answerFive = prompt('Is it possible I live in Seattle?').toLowerCase();
   if (answerFive === 'yes' || answerFive === 'y') {
     correctAnswersTotal++;
     //console.log('You are on a roll!');
@@ -93,8 +93,8 @@ function questionFive() {
 //for other integer questions - parceInt(prompt('Guess my random number. Choose between 1 and 10')); - the plus is an awesome shorthand!
 
 function questionSix() {
-  for (var i = 0; i < numberGuesses; i++) {
-    var userAnswer = +prompt('Guess my random number. Choose between 1 and 10');
+  for (let i = 0; i < numberGuesses; i++) {
+    let userAnswer = +prompt('Guess my random number. Choose between 1 and 10');
     if (userAnswer === randomNumber) {
       correctAnswersTotal++;
       alert(`Great job ${userName}, you are correct!`);
@@ -119,8 +119,8 @@ function questionSix() {
 function questionSeven() {
   while (!guessCorrect && guessCount < totalGuesses) {
     guessCount++;
-    var question = prompt(`What do you think is one of my ${favoriteColors.length} favorite colors?`).toLowerCase();
-    for (var j = 0; j < totalGuesses; j++) {
+    let question = prompt(`What do you think is one of my ${favoriteColors.length} favorite colors?`).toLowerCase();
+    for (let j = 0; j < totalGuesses; j++) {
       if (question === favoriteColors[j]) {
         correctAnswersTotal++;
         alert('That is correct');
@@ -146,7 +146,7 @@ questionFive();
 questionSix();
 questionSeven();
 
-var questionAmount = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven];
+let questionAmount = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven];
 
 // final score spelled out
 alert(`Thanks for playing, you got ${correctAnswersTotal} out of ${questionAmount.length} correct!`);
