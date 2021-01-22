@@ -13,6 +13,14 @@ var numberGuesses = 4;
 var guessCorrect = false;
 var randomNumber = Math.floor(Math.random() * 10) + 1;
 
+function tryAgain() {
+  alert('Try again!');
+}
+
+function notRelevant() {
+  alert('That is not close!')
+}
+
 var userName = prompt('Welcome to my About Me Page! Before we begin with the games though, what\'s your name?');
 alert(`Hello ${userName}, glad to meet you - I have 3 games that include 7 questions about different things I like. Hope you enjoy, good luck!`);
 // write 5 questions - yes or no - y or n (not case sensitive)
@@ -35,9 +43,9 @@ function questionTwo() {
     //console.log('You are on a roll!');
     alert('Another correct guess!');
   } else if (answerTwo === 'yes' || answerTwo === 'y') {
-    alert('Try Again!');
+    tryAgain();
   } else {
-    alert('That isn\'t even relevant');
+    notRelevant();
   }
 }
 
@@ -48,9 +56,9 @@ function questionThree() {
     //console.log('You are on a roll!');
     alert('Another correct guess!');
   } else if (answerThree === 'no' || answerThree === 'n') {
-    alert('Try Again!');
+    tryAgain();
   } else {
-    alert('That\'s not even relevant');
+    notRelevant();
   }
 }
 
@@ -61,7 +69,7 @@ function questionFour() {
     //console.log('correct, I like the city!');
     alert('Correct, I like the city!');
   } else if (answerFour === 'yes' || answerFour === 'y') {
-    alert('Not a chance!');
+    tryAgain();
   } else {
     alert('You\'ve gotten so far, to be that wrong!');
   }
@@ -74,9 +82,9 @@ function questionFive() {
     //console.log('You are on a roll!');
     alert(userName + '! Great guesses, you are correct!');
   } else if (answerFive === 'no' || answerFive === 'n') {
-    alert('Try Again!');
+    tryAgain();
   } else {
-    alert('That\'s not even relevant');
+    notRelevant();
   }
 }
 
@@ -121,7 +129,7 @@ function questionSeven() {
     }
   }
   if (!guessCorrect) {
-    alert('I like it but that is not correct.');
+    tryAgain();
   }
   //all favoriteColors that were in the array
   if (!guessCorrect) {
