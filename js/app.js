@@ -18,7 +18,7 @@ function tryAgain() {
 }
 
 function notRelevant() {
-  alert('That is not close!')
+  alert('That is not close!');
 }
 
 let userName = prompt('Welcome to my About Me Page! Before we begin with the games though, what\'s your name?');
@@ -29,7 +29,7 @@ function questionOne() {
   let answerOne = prompt('Do you think I live in Washington?').toLowerCase();
   if (answerOne === 'yes' || answerOne === 'y') {
     correctAnswersTotal++;
-    // console.log('you are correct!')
+    console.log('you are correct!');
     alert('You are correct!');
   } else {
     alert('Close, but not quite.');
@@ -151,4 +151,4 @@ let questionAmount = [questionOne, questionTwo, questionThree, questionFour, que
 // final score spelled out
 alert(`Thanks for playing, you got ${correctAnswersTotal} out of ${questionAmount.length} correct!`);
 
-// alert(`Thanks for playing, ${userName}! Hope you enjoyed your time, and I look forward to talking more soon!`);
+alert(`Thanks for playing, ${userName}! Hope you enjoyed your time, and I look forward to talking more soon!`);
